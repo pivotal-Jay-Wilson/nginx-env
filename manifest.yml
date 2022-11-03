@@ -1,0 +1,23 @@
+---
+applications:
+- name: static
+  memory: 32M
+  instances: 1
+  path: static
+  routes:
+  - route: static-test.cfapps-04.slot-34.tanzu-gss-labs.vmware.com  
+  env:
+   SPLIT: split0
+- name: a
+  memory: 32M
+  instances: 1
+  path: a
+  routes:
+  - route: appa.cfapps-04.slot-34.tanzu-gss-labs.vmware.com
+- name: b
+  memory: 32M
+  instances: 1
+  path: b
+  routes:
+  - route: appb.cfapps-04.slot-34.tanzu-gss-labs.vmware.com
+
